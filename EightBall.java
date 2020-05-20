@@ -1,5 +1,5 @@
 import java.io.FileReader;
-
+#janes changes!!
 public class EightBall {
 	public static void main(String args[]) throws Exception {
 		char[] buffer = new char[1024];
