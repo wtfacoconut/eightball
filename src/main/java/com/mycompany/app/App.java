@@ -28,11 +28,12 @@ public class App
         System.out.println("... but thankfully, Checker has our back: http://checkerframework.org");
         
         // Adding this to test query for empty if statement:
-		if(filename.length() >= 10 && filename.length() <= 19) {
-		} else if(filename.length() >= 20) {
-			System.out.println("File name is 20 characters or longer.");
-		} else {
-			System.out.println("File name is less than 10 characters.");
-		}
+	String filename = args[0];
+	if(filename.length() >= 10 && filename.length() <= 19) {
+	} else if(filename.length() >= 20) {
+		System.out.println("File name is 20 characters or longer.");
+	} else {
+		System.out.println("File name is less than 10 characters.");
+	}
     }
 }
