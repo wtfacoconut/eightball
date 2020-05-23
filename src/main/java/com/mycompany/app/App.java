@@ -11,11 +11,14 @@ public class App
         System.out.println( "Hello World!" );
 
         System.out.println("A NullPointerException is a drag...");
-        Object myObject = null;
+        int myObject = 0;
+	if(myObject <= 10){
+		myObject = null;
+	}
         /**
          * Checker prevents this from compiling...
          */
-        System.out.println("myObject: " + myObject.toString());
+        System.out.println("myObject: " + String.valueOf(myObject));
         
         /**
          * ... which is simply fantastic. It shows:
