@@ -1,42 +1,18 @@
 package com.mycompany.app;
+import java.io.FileReader;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-
-        System.out.println("A NullPointerException is a drag...");
-        String myObject = "";
-	if(args[1]== "neverGoingToHappen"){
-		myObject = args[2];
-	}
-        /**
-         * Checker prevents this from compiling...
-         */
-        System.out.println("myObject: " + myObject);
-        
-        /**
-         * ... which is simply fantastic. It shows:
-         *
-         * error: [dereference.of.nullable] dereference of possibly-null
-         * reference myObject
-         *
-         * http://checkerframework.org
-         */
-        System.out.println("... but thankfully, Checker has our back: http://checkerframework.org");
-        
-        // Adding this to test query for empty if statement:
-	String filename = args[0];
-	if(filename.length() >= 10 && filename.length() <= 19) {
-	} else if(filename.length() >= 20) {
-		System.out.println("File name is 20 characters or longer.");
-	} else {
-		System.out.println("File name is less than 10 characters.");
-	}
+    	char[] buffer = new char[1024];
+		String filename = args[0];
+		try {
+			filename = "" + (Integer.parseInt(filename) % 3);
+		} catch (Exception e) {
+			System.out.println("Invalid input.");
+		}
+		new FileReader(filename).read(buffer);
+		System.out.println(buffer);
     }
 }
