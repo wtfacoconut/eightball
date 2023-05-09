@@ -23,3 +23,15 @@ steps:
     script: |
       python --version
       python3 --version
+
+- task: FortifyScanCentralSAST@7
+  inputs:
+    scanCentralCtrlUrl: 'https://scsastctrl.uat.fortifyhosted.net/scancentral-ctrl'
+    scanCentralClientToken: '$(ScanCentral.ClientToken)'
+    sscUrl: 'https://ssc.uat.fortifyhosted.net/'
+    sscCiToken: '$(ScanCentral.SscCiToken)'
+    uploadToSSC: true
+    applicationIdentifierType: 'byId'
+    applicationVersionId: '10075'
+    buildTool: 'none'
+    pythonVersion: '3'
