@@ -32,6 +32,6 @@ steps:
     sscCiToken: '$(ScanCentral.SscCiToken)'
     uploadToSSC: true
     applicationIdentifierType: 'byId'
-    applicationVersionId: '10075'
+    applicationVersionId: '10076'
     buildTool: 'none'
     pythonVersion: '3'
